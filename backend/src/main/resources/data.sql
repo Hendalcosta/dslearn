@@ -21,3 +21,7 @@ INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES ('2.0
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Trilha de Aulas', 'Trilha Principal do Curso', 1, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 1, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Forum', 'Tire suas dúvidas', 2, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 2, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Lives', 'Acompanhe conteúdo ao vivo', 3, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 0, 1);
+
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 1', 'Introdução a Orfientação à Objetos', 1, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 1, null);
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 2', 'Introdução a Linguagem Java', 2, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 1, null);
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 3', 'Classes e Objetos em Java', 3, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 1, 1);
