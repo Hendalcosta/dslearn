@@ -18,19 +18,19 @@ public class Task extends Lesson{
 	private double weight;
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Instant duedate;
+	private Instant dueDate;
 	
 	public Task() {
 	}
 
 	public Task(Long id, String title, Integer position, Section section, String description, Integer questionCount,
-			Integer approvalCount, double weight, Instant duedate) {
+			Integer approvalCount, double weight, Instant dueDate) {
 		super(id, title, position, section); //mudar o tipo de contrutor na IDE para obter os atributos da superclasse neste construtor
 		this.description = description;
 		this.questionCount = questionCount;
 		this.approvalCount = approvalCount;
 		this.weight = weight;
-		this.duedate = duedate;
+		this.dueDate = dueDate;
 	}
 
 	public String getDescription() {
@@ -65,12 +65,12 @@ public class Task extends Lesson{
 		this.weight = weight;
 	}
 
-	public Instant getDuedate() {
-		return duedate;
+	public Instant getDueDate() {
+		return dueDate;
 	}
 
-	public void setDuedate(Instant duedate) {
-		this.duedate = duedate;
+	public void setDueDate(Instant dueDate) {
+		this.dueDate = dueDate;
 	}
 	
 	//Não precisa de hashcode e Equals por que herdou esses metodos da super classe Lesson
