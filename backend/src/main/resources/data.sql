@@ -25,3 +25,6 @@ INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) 
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 1', 'Introdução a Orfientação à Objetos', 1, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 1, null);
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 2', 'Introdução a Linguagem Java', 2, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 1, null);
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 3', 'Classes e Objetos em Java', 3, 'https://live.staticflickr.com/3897/14485179234_803e4a0f08_w.jpg', 1, 1);
+
+INSERT INTO tb_enrollment (user_id, offer_id,  enroll_Moment, refund_Moment, available, only_Update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2024-01-31T13:00:00Z', null, true, false);
+INSERT INTO tb_enrollment (user_id, offer_id,  enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2024-01-31T13:00:00Z', null, true, false);
