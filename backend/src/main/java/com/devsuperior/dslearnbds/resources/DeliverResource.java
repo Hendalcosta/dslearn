@@ -2,6 +2,7 @@ package com.devsuperior.dslearnbds.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,8 +20,9 @@ public class DeliverResource {
 	@Autowired
 	private DeliverService service;
 	
+	@PreAuthorize("hasAnyRole('ADMIN', 'INSTRUCTOR')") //autoriza apenas os usuários com os roles ADMIN e INSTRUCTOR a acessarem o metodo saveRevision. Pode ser usado também no método na camada de serviço (DeliverService)
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<Void> update (@PathVariable Long id, @RequestBody DeliverRevisionDTO dto) {
+	public ResponseEntity<Void> saveRevision (@PathVariable Long id, @RequestBody DeliverRevisionDTO dto) {
 		service.saveRevision(id, dto);
 		return ResponseEntity.noContent().build();
 	}
